@@ -22,7 +22,7 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     @Override
-    public List<CharacterDto> getAllByName(String name) {
+    public List<CharacterDto> findAllByName(String name) {
         return repository.findAllByNameContainingIgnoreCase(name)
                 .stream()
                 .map(mapper::toDto)

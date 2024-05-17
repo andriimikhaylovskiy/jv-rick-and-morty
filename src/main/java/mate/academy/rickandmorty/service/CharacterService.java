@@ -7,7 +7,7 @@ import mate.academy.rickandmorty.dto.internal.CharacterDto;
 public interface CharacterService {
     CharacterDto getRandomCharacter();
 
-    List<CharacterDto> getAllByName(String name);
+    List<CharacterDto> findAllByName(String name);
 
     CharacterDto save(CreateCharacterRequestDto requestDto);
 }

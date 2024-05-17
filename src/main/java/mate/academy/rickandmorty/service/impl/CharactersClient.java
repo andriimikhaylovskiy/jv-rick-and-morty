@@ -41,8 +41,7 @@ public class CharactersClient {
                         response.body(),
                         CharacterResponseDataDto.class);
                 characterResponseDataDto.results()
-                        .stream().map(createCharacterRequestDto ->
-                                characterService.save(createCharacterRequestDto))
+                        .stream().map(characterService::save)
                         .toList();
                 url = characterResponseDataDto.info().next();
             } catch (IOException | InterruptedException e) {

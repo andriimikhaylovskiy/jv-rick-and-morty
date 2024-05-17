@@ -27,7 +27,7 @@ public class CharacterController {
 
     @Operation(summary = "Get list characters", description = "Get list characters by name from db")
     @GetMapping()
-    public List<CharacterDto> getAllByName(@RequestParam String name) {
-        return service.getAllByName(name);
+    public List<CharacterDto> findAllByName(@RequestParam String name) {
+        return service.findAllByName(name);
     }
 }
